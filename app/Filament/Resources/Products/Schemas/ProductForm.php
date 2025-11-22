@@ -3,11 +3,13 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use Dom\Text;
+use Tiptap\Core\Mark;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\SpatieTagsInput;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class ProductForm
 {
@@ -56,6 +58,9 @@ class ProductForm
                             ->numeric()
                             ->minValue(0)
                             ->prefix('grams'),
+                        MarkdownEditor::make('description')
+                            ->label('Product Description')
+                            ->required(),
                     ]),
             ]);
     }

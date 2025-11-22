@@ -14,12 +14,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Product extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes, InteractsWithMedia, HasTags;
+    use InteractsWithMedia, SoftDeletes, HasTags;
 
     public function registerAllMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('cover')
-            ->fit(Fit::Contain, 300, 400)
+            ->fit(Fit::Contain, 300, 300)
             ->nonQueued();
     }
 }
