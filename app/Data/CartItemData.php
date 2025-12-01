@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Data\ProductData;
 use Spatie\LaravelData\Data;
 use Livewire\Attributes\Computed;
+use Spatie\LaravelData\Optional;
 
 class CartItemData extends Data
 {

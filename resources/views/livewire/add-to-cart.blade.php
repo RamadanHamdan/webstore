@@ -17,7 +17,7 @@
                      <input
                          class="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-white"
                          style="-moz-appearance: textfield;" type="number" x-model.number="quantity"
-                         @input="if(quantity < 0) quantity = 0" min="0">
+                         @input="if(quantity < 0) quantity = "0" min="0">
 
 
                      <!-- Tombol tambah -->

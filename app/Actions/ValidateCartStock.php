@@ -22,7 +22,6 @@ class ValidateCartStock
         foreach ($this->cart->all()->items as $item) {
             /** @var ProductData $product */
             $product = $item->product();
-
             if (!$product || $product->stock < $item->quantity) {
                 $insufficient[] = [
                     'sku' => $product->sku,
